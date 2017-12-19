@@ -27,30 +27,30 @@
 			<div class="search-icon"></div>
 			<div class="search-placeholder">共有3862场折扣演出在售</div>
 		</router-link>
-		<router-link to="/show">
-			<div class="nav-list">
+		<!-- <router-link to="/show"> -->
+			<div class="nav-list" @click="show">
 				<div class="nav-item">
-					<div class="YanChangHui"></div>
-					<p>演唱会</p>
+					<div class="YanChangHui" :data-inde="1"></div>
+					<p  :data-inde="1">演唱会</p>
+				</div>
+				<div class="nav-item" >
+					<div class="HuaJuGeJu" :data-inde="2"></div>
+					<p :data-inde="2">话剧歌剧</p>
 				</div>
 				<div class="nav-item">
-					<div class="HuaJuGeJu"></div>
-					<p>话剧歌剧</p>
+					<div class="YinYueHui" :data-inde="4"></div>
+					<p :data-inde="4">音乐会</p>
 				</div>
-				<div class="nav-item">
-					<div class="YinYueHui"></div>
-					<p>音乐会</p>
+				<div class="nav-item" >
+					<div class="TiYuSaiShi" :data-inde="3"></div>
+					<p :data-inde="3">体育赛事</p>
 				</div>
-				<div class="nav-item">
-					<div class="TiYuSaiShi"></div>
-					<p>体育赛事</p>
-				</div>
-				<div class="nav-item">
-					<div class="more"></div>
-					<p>更多</p>
+				<div class="nav-item" >
+					<div class="more" :data-inde="0"></div>
+					<p :data-inde="0">更多</p>
 				</div>
 			</div>
-		</router-link>
+		<!-- </router-link> -->
 		<div class="hot-show">
 			<div class="section-title">
 				近期热门&nbsp;&nbsp;&nbsp;
@@ -131,7 +131,7 @@
 	            <div class="footer-icon"></div>
 	            <p class="footer-name">精选</p>
 	        </router-link>
-	        <router-link to="/show">
+	        <router-link to="/show/0">
 	            <div class="footer-icon"></div>
 	            <p class="footer-name">演出</p>
 	        </router-link>
@@ -151,6 +151,7 @@
 			return {
 				showList: [],
 				recommendList: [],
+				index:0,
 				swiperOption: {
 					pagination: '.swiper-pagination',
 			        paginationClickable: true,
@@ -172,9 +173,15 @@
 		},
 		methods:{
 			// 路由编程式传参  在方法中进行路由跳转，并传递参数
-            changeDetail(showOID){
+        changeDetail(showOID){
                this.$router.push("./showinfo/"+showOID)
-		   }
+		   },
+			 show($event){
+				this.index = $event.target.dataset.inde;
+				 // console.log(this.index);
+				  this.$router.push("./show/"+this.index);
+			 }
+
 		},
 		created(){
 			// 使用axios插件请求数据
@@ -188,10 +195,6 @@
 				this.recommendList = res.data.result.data;
 			});
 
-			// this.$http.get("https://m.tking.cn/prodapi/mobile/pub/site/1002/hot_show",{$offset:0,length:10,src:'weixin',time:1513162360806}).then((res)=>{
-			// 	this.recommendList = res.data.result.data;
-			// });
-
 		}
 	}
 	// document.querySelector("footer").style.display = "none";
@@ -203,6 +206,7 @@
 </style>
 
 <style>
+
 	.homepage{
 		width: 100%;
 	}
@@ -645,4 +649,11 @@
 	footer a p{
 		color: #333;
 	}
+/* .router-link-active{
+ 	width: 0.9rem;
+	height: 0.9rem;
+  	background: red;
+ 
+
+  }*/
 </style>

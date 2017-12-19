@@ -2,7 +2,7 @@
 	<div class="search-page">
 		<div class="search-row">
 			<form>
-				<input type="search" placeholder="搜索明星、演出、场馆" name="" class="search-input">
+				<input type="search" placeholder="搜索明星、演出、场馆" name="" class="search-input" v-model="title"  @keyup="search">
 			</form>
 			<div class="search-icon"></div>	
 			<router-link to="/home" class="search-option">取消</router-link>
@@ -27,7 +27,8 @@
 	export default {
 		data(){
 			return {
-				showNamesList: []
+				showNamesList: [],
+				title:''
 			}
 		},
 		created(){
@@ -35,7 +36,17 @@
 			this.$http.get("./static/data/showNames.json", {}).then((res)=>{
 				this.showNamesList = res.data.result.data;
 			});
+
 		}
+		// methods:{
+		// 	search(){
+		// 		var _self = this;
+		// 		this.$http.get("https://m.tking.cn/prodapi/page/index",{offset:1,length:10,keyword:_self.title}).then((res)=>{
+		// 			console.log(_self .title)
+		// 		// this.showNamesList = res.data.result.data;
+		// 	});
+		// 	}
+		// }
 	}
 	
 </script>

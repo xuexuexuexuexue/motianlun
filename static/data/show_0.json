@@ -1,0 +1,542 @@
+{
+    "statusCode": 200,
+    "result": {
+        "showTypes": [
+            {
+                "code": 1,
+                "displayName": "演唱会",
+                "name": "VocalConcert"
+            },
+            {
+                "code": 7,
+                "displayName": "展览休闲",
+                "name": "Exhibition"
+            },
+            {
+                "code": 3,
+                "displayName": "话剧歌剧",
+                "name": "Drama"
+            },
+            {
+                "code": 6,
+                "displayName": "体育赛事",
+                "name": "Sports"
+            }
+        ],
+        "uniqueCities": [
+            {
+                "cityOID": "1101",
+                "province": "北京市",
+                "cityName": "北京市",
+                "expressDay": "3"
+            },
+            {
+                "cityOID": "2201",
+                "province": "吉林省",
+                "cityName": "长春市",
+                "expressDay": "5"
+            },
+            {
+                "cityOID": "4101",
+                "province": "河南省",
+                "cityName": "郑州市",
+                "expressDay": "5"
+            },
+            {
+                "cityOID": "4103",
+                "province": "河南省",
+                "cityName": "洛阳市",
+                "expressDay": "5"
+            },
+            {
+                "cityOID": "4107",
+                "province": "河南省",
+                "cityName": "新乡市",
+                "expressDay": "5"
+            },
+            {
+                "cityOID": "4114",
+                "province": "河南省",
+                "cityName": "商丘市",
+                "expressDay": "5"
+            },
+            {
+                "cityOID": "2101",
+                "province": "辽宁省",
+                "cityName": "沈阳市",
+                "expressDay": "5"
+            },
+            {
+                "cityOID": "2102",
+                "province": "辽宁省",
+                "cityName": "大连市",
+                "expressDay": "5"
+            },
+            {
+                "cityOID": "2104",
+                "province": "辽宁省",
+                "cityName": "抚顺市",
+                "expressDay": "5"
+            },
+            {
+                "cityOID": "2105",
+                "province": "辽宁省",
+                "cityName": "本溪市",
+                "expressDay": "5"
+            },
+            {
+                "cityOID": "3701",
+                "province": "山东省",
+                "cityName": "济南市",
+                "expressDay": "5"
+            },
+            {
+                "cityOID": "3702",
+                "province": "山东省",
+                "cityName": "青岛市",
+                "expressDay": "5"
+            },
+            {
+                "cityOID": "3706",
+                "province": "山东省",
+                "cityName": "烟台市",
+                "expressDay": "5"
+            },
+            {
+                "cityOID": "3707",
+                "province": "山东省",
+                "cityName": "潍坊市",
+                "expressDay": "5"
+            },
+            {
+                "cityOID": "3708",
+                "province": "山东省",
+                "cityName": "济宁市",
+                "expressDay": "5"
+            },
+            {
+                "cityOID": "1501",
+                "province": "内蒙古自治区",
+                "cityName": "呼和浩特市",
+                "expressDay": "5"
+            },
+            {
+                "cityOID": "1401",
+                "province": "山西省",
+                "cityName": "太原市",
+                "expressDay": "5"
+            },
+            {
+                "cityOID": "1404",
+                "province": "山西省",
+                "cityName": "长治市",
+                "expressDay": "5"
+            },
+            {
+                "cityOID": "1201",
+                "province": "天津市",
+                "cityName": "天津市",
+                "expressDay": "5"
+            },
+            {
+                "cityOID": "1301",
+                "province": "河北省",
+                "cityName": "石家庄市",
+                "expressDay": "5"
+            },
+            {
+                "cityOID": "1302",
+                "province": "河北省",
+                "cityName": "唐山市",
+                "expressDay": "5"
+            },
+            {
+                "cityOID": "1310",
+                "province": "河北省",
+                "cityName": "廊坊市",
+                "expressDay": "5"
+            }
+        ],
+        "pagination": {
+            "count": 830,
+            "offset": 0,
+            "length": 10,
+            "sortingConditions": []
+        },
+        "data": [
+            {
+                "showOID": "59f033246204e67c03aa05bf",
+                "showName": "【北京站】2017年罗大佑\"当年离家的年轻人\"巡回演唱会",
+                "advertise": "",
+                "showType": {
+                    "code": 1,
+                    "displayName": "演唱会",
+                    "name": "VocalConcert"
+                },
+                "showStatus": {
+                    "code": 3,
+                    "displayName": "售票中",
+                    "name": "Onsale"
+                },
+                "minPrice": 478,
+                "posterURL": "https://img1.tking.cn/assets/img/ym6mDkT3ii.jpg",
+                "venueOID": "571dec000cf22ad1941ae0ba",
+                "venueName": "凯迪拉克中心(原五棵松体育馆)",
+                "weight": 4222346,
+                "firstShowTime": "2017.12.31",
+                "lastShowTime": "2017.12.31",
+                "latestShowTime": "2017-12-31 19:00",
+                "firstShowTime_weekday": "2017-12-31 星期日 19:00:00",
+                "lastShowTime_weekday": "2017-12-31 星期日 19:00:00",
+                "latestShowTime_weekday": "2017-12-31 星期日 19:00:00",
+                "latestShowTime_long": 1514718000000,
+                "favour": 107,
+                "supportCoupon": true,
+                "limitation": 6,
+                "discount": 0.82,
+                "supportSeatPicking": true,
+                "supportVisiblePicking": true,
+                "hits": 221700,
+                "keyWords": "",
+                "supportVr": true,
+                "isPermanent": false
+            },
+            {
+                "showOID": "5a26102ea251d80848986967",
+                "showName": "【北京站】有嘻哈LIVE巡回演唱会",
+                "advertise": "中国嘻哈的狂潮才刚刚开始",
+                "showType": {
+                    "code": 1,
+                    "displayName": "演唱会",
+                    "name": "VocalConcert"
+                },
+                "showStatus": {
+                    "code": 3,
+                    "displayName": "售票中",
+                    "name": "Onsale"
+                },
+                "minPrice": 430,
+                "posterURL": "https://img0.tking.cn/assets/img/HAWwMnDdZe.jpg",
+                "venueOID": "576273800cf2326a5c7e182e",
+                "venueName": "首都体育馆",
+                "weight": 4055349,
+                "firstShowTime": "2017.12.23",
+                "lastShowTime": "2017.12.23",
+                "latestShowTime": "2017-12-23 19:30",
+                "firstShowTime_weekday": "2017-12-23 星期六 19:30:00",
+                "lastShowTime_weekday": "2017-12-23 星期六 19:30:00",
+                "latestShowTime_weekday": "2017-12-23 星期六 19:30:00",
+                "latestShowTime_long": 1514028600000,
+                "favour": 209,
+                "supportCoupon": true,
+                "limitation": 4,
+                "discount": 0.74,
+                "supportSeatPicking": true,
+                "supportVisiblePicking": true,
+                "hits": 54590,
+                "keyWords": "",
+                "supportVr": false,
+                "isPermanent": false
+            },
+            {
+                "showOID": "59cf29ada251d806cc51a4c3",
+                "showName": "【北京站】2017远去的恐龙-国家体育馆恐龙展",
+                "advertise": "远去的恐龙",
+                "showType": {
+                    "code": 7,
+                    "displayName": "展览休闲",
+                    "name": "Exhibition"
+                },
+                "showStatus": {
+                    "code": 3,
+                    "displayName": "售票中",
+                    "name": "Onsale"
+                },
+                "minPrice": 139,
+                "posterURL": "https://img0.tking.cn/assets/img/tpadYajfiB.jpg",
+                "venueOID": "59cf27ff0cf24fc1c581cbf7",
+                "venueName": "国家体育馆",
+                "weight": 4047990,
+                "firstShowTime": "2017.12.15",
+                "lastShowTime": "2018.01.31",
+                "latestShowTime": "2017-12-16 14:00",
+                "firstShowTime_weekday": "2017-12-15 星期五 16:30:00",
+                "lastShowTime_weekday": "2018-01-31 星期三 15:00:00",
+                "latestShowTime_weekday": "2017-12-16 星期六 14:00:00",
+                "latestShowTime_long": 1513404000000,
+                "favour": 191,
+                "supportCoupon": true,
+                "limitation": 6,
+                "discount": 0.43,
+                "supportSeatPicking": false,
+                "supportVisiblePicking": false,
+                "hits": 44460,
+                "keyWords": "",
+                "supportVr": false,
+                "isPermanent": false
+            },
+            {
+                "showOID": "594b70d90cf283a50c73509d",
+                "showName": "【北京站】孟京辉经典戏剧作品《恋爱的犀牛》 ",
+                "advertise": "",
+                "showType": {
+                    "code": 3,
+                    "displayName": "话剧歌剧",
+                    "name": "Drama"
+                },
+                "showStatus": {
+                    "code": 3,
+                    "displayName": "售票中",
+                    "name": "Onsale"
+                },
+                "minPrice": 123,
+                "posterURL": "https://img0.tking.cn/assets/img/TraZrCsZZw.jpg",
+                "venueOID": "5770cf500cf2e9e92fa638fe",
+                "venueName": "蜂巢剧场",
+                "weight": 4044375,
+                "firstShowTime": "2017.12.06",
+                "lastShowTime": "2018.02.11",
+                "latestShowTime": "2017-12-16 14:30",
+                "firstShowTime_weekday": "2017-12-06 星期三 19:30:00",
+                "lastShowTime_weekday": "2018-02-11 星期日 14:30:00",
+                "latestShowTime_weekday": "2017-12-16 星期六 14:30:00",
+                "latestShowTime_long": 1513405800000,
+                "favour": 382,
+                "supportCoupon": true,
+                "limitation": 6,
+                "discount": 0.85,
+                "supportSeatPicking": false,
+                "supportVisiblePicking": false,
+                "hits": 41855,
+                "keyWords": "",
+                "supportVr": false,
+                "isPermanent": false
+            },
+            {
+                "showOID": "594098920cf220616851bcb2",
+                "showName": "【北京站】至乐汇《驴得水Mr. Donkey》荒诞戏剧",
+                "advertise": "全明星老戏骨回来飙戏",
+                "showType": {
+                    "code": 3,
+                    "displayName": "话剧歌剧",
+                    "name": "Drama"
+                },
+                "showStatus": {
+                    "code": 3,
+                    "displayName": "售票中",
+                    "name": "Onsale"
+                },
+                "minPrice": 165,
+                "posterURL": "https://img2.tking.cn/assets/img/CkBeD2BRD4.jpg",
+                "venueOID": "5770e3f70cf2e9e92fa63b70",
+                "venueName": "大隐剧院",
+                "weight": 4039832,
+                "firstShowTime": "2017.12.07",
+                "lastShowTime": "2017.12.17",
+                "latestShowTime": "2017-12-16 19:30",
+                "firstShowTime_weekday": "2017-12-07 星期四 19:30:00",
+                "lastShowTime_weekday": "2017-12-17 星期日 14:30:00",
+                "latestShowTime_weekday": "2017-12-16 星期六 19:30:00",
+                "latestShowTime_long": 1513423800000,
+                "favour": 328,
+                "supportCoupon": true,
+                "limitation": 6,
+                "discount": 0.95,
+                "supportSeatPicking": false,
+                "supportVisiblePicking": false,
+                "hits": 38120,
+                "keyWords": "",
+                "supportVr": false,
+                "isPermanent": false
+            },
+            {
+                "showOID": "59f9c37a6204e62c7ed9255f",
+                "showName": "【北京站】羽泉 2017北京演唱会 ",
+                "advertise": "两个人，成了一支队伍",
+                "showType": {
+                    "code": 1,
+                    "displayName": "演唱会",
+                    "name": "VocalConcert"
+                },
+                "showStatus": {
+                    "code": 3,
+                    "displayName": "售票中",
+                    "name": "Onsale"
+                },
+                "minPrice": 451,
+                "posterURL": "https://img1.tking.cn/assets/img/3RiSn8yM6i.jpg",
+                "venueOID": "581bfd6c0cf2d1af010f8f4f",
+                "venueName": "工人体育馆（北京）",
+                "weight": 4029351,
+                "firstShowTime": "2017.12.24",
+                "lastShowTime": "2017.12.25",
+                "latestShowTime": "2017-12-24 19:30",
+                "firstShowTime_weekday": "2017-12-24 星期日 19:30:00",
+                "lastShowTime_weekday": "2017-12-25 星期一 19:30:00",
+                "latestShowTime_weekday": "2017-12-24 星期日 19:30:00",
+                "latestShowTime_long": 1514115000000,
+                "favour": 93,
+                "supportCoupon": true,
+                "limitation": 6,
+                "discount": 0.76,
+                "supportSeatPicking": true,
+                "supportVisiblePicking": true,
+                "hits": 28775,
+                "keyWords": "",
+                "supportVr": false,
+                "isPermanent": false
+            },
+            {
+                "showOID": "59acfa850cf22a7175a6cf8b",
+                "showName": "【北京站】2017-2018赛季CBA联赛-北京首钢VS江苏肯帝亚",
+                "advertise": "",
+                "showType": {
+                    "code": 6,
+                    "displayName": "体育赛事",
+                    "name": "Sports"
+                },
+                "showStatus": {
+                    "code": 2,
+                    "displayName": "预售中",
+                    "name": "Presale"
+                },
+                "minPrice": 48,
+                "posterURL": "https://img1.tking.cn/assets/img/pz2cZJ5C2x.jpg",
+                "venueOID": "571dec000cf22ad1941ae0ba",
+                "venueName": "凯迪拉克中心(原五棵松体育馆)",
+                "weight": 4027117,
+                "firstShowTime": "2017.12.24",
+                "lastShowTime": "2017.12.24",
+                "latestShowTime": "2017-12-24 19:30",
+                "firstShowTime_weekday": "2017-12-24 星期日 19:30:00",
+                "lastShowTime_weekday": "2017-12-24 星期日 19:30:00",
+                "latestShowTime_weekday": "2017-12-24 星期日 19:30:00",
+                "latestShowTime_long": 1514115000000,
+                "favour": 100,
+                "supportCoupon": true,
+                "limitation": 4,
+                "discount": 0.36,
+                "supportSeatPicking": false,
+                "supportVisiblePicking": true,
+                "hits": 26705,
+                "keyWords": "",
+                "supportVr": false,
+                "isPermanent": false
+            },
+            {
+                "showOID": "59dc7563a251d806cc60b858",
+                "showName": "【北京站】开心麻花2018爆笑贺岁舞台剧《婚前旅行指南》 ",
+                "advertise": "亲爱的，接招吧~",
+                "showType": {
+                    "code": 3,
+                    "displayName": "话剧歌剧",
+                    "name": "Drama"
+                },
+                "showStatus": {
+                    "code": 3,
+                    "displayName": "售票中",
+                    "name": "Onsale"
+                },
+                "minPrice": 103,
+                "posterURL": "https://img0.tking.cn/assets/img/2KPFFKRhFz.jpg",
+                "venueOID": "577229b10cf2e9e92fa64a23",
+                "venueName": "海淀剧院",
+                "weight": 4025058,
+                "firstShowTime": "2017.12.09",
+                "lastShowTime": "2017.12.31",
+                "latestShowTime": "2017-12-16 14:30",
+                "firstShowTime_weekday": "2017-12-09 星期六 19:30:00",
+                "lastShowTime_weekday": "2017-12-31 星期日 19:30:00",
+                "latestShowTime_weekday": "2017-12-16 星期六 14:30:00",
+                "latestShowTime_long": 1513405800000,
+                "favour": 192,
+                "supportCoupon": true,
+                "limitation": 6,
+                "discount": 0.64,
+                "supportSeatPicking": false,
+                "supportVisiblePicking": false,
+                "hits": 23380,
+                "keyWords": "",
+                "supportVr": false,
+                "isPermanent": false
+            },
+            {
+                "showOID": "59dc7a4f6204e60c32f334ed",
+                "showName": "【北京站】开心麻花×庾澄庆 2018爆笑贺岁音乐喜剧《西哈游记》",
+                "advertise": "呔，吃俺老孙一麦~",
+                "showType": {
+                    "code": 3,
+                    "displayName": "话剧歌剧",
+                    "name": "Drama"
+                },
+                "showStatus": {
+                    "code": 3,
+                    "displayName": "售票中",
+                    "name": "Onsale"
+                },
+                "minPrice": 70,
+                "posterURL": "https://img1.tking.cn/assets/img/FXABtHNkTS.jpg",
+                "venueOID": "577de87d0cf208ae917f9b9e",
+                "venueName": "世纪剧院",
+                "weight": 4023114,
+                "firstShowTime": "2017.12.15",
+                "lastShowTime": "2017.12.31",
+                "latestShowTime": "2017-12-16 19:30",
+                "firstShowTime_weekday": "2017-12-15 星期五 19:30:00",
+                "lastShowTime_weekday": "2017-12-31 星期日 19:30:00",
+                "latestShowTime_weekday": "2017-12-16 星期六 19:30:00",
+                "latestShowTime_long": 1513423800000,
+                "favour": 183,
+                "supportCoupon": true,
+                "limitation": 6,
+                "discount": 0.63,
+                "supportSeatPicking": false,
+                "supportVisiblePicking": false,
+                "hits": 21730,
+                "keyWords": "",
+                "supportVr": false,
+                "isPermanent": false
+            },
+            {
+                "showOID": "59eeb3a96204e67c037a564e",
+                "showName": "【北京站】2017冰上之星中国巡演 ",
+                "advertise": " 冰上之星中国巡演",
+                "showType": {
+                    "code": 6,
+                    "displayName": "体育赛事",
+                    "name": "Sports"
+                },
+                "showStatus": {
+                    "code": 3,
+                    "displayName": "售票中",
+                    "name": "Onsale"
+                },
+                "minPrice": 103,
+                "posterURL": "https://img1.tking.cn/assets/img/xEJn3QFhcH.jpg",
+                "venueOID": "576273800cf2326a5c7e182e",
+                "venueName": "首都体育馆",
+                "weight": 4022405,
+                "firstShowTime": "2017.12.15",
+                "lastShowTime": "2017.12.16",
+                "latestShowTime": "2017-12-16 19:30",
+                "firstShowTime_weekday": "2017-12-15 星期五 19:30:00",
+                "lastShowTime_weekday": "2017-12-16 星期六 19:30:00",
+                "latestShowTime_weekday": "2017-12-16 星期六 19:30:00",
+                "latestShowTime_long": 1513423800000,
+                "favour": 83,
+                "supportCoupon": true,
+                "limitation": 4,
+                "discount": 0.22,
+                "supportSeatPicking": false,
+                "supportVisiblePicking": false,
+                "hits": 21545,
+                "keyWords": "",
+                "supportVr": false,
+                "isPermanent": false
+            }
+        ]
+    },
+    "comments": null,
+    "pagination": null,
+    "data": null
+}

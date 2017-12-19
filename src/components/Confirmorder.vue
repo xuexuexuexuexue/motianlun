@@ -1,20 +1,20 @@
 <template>
-	<div class="confirm-page">
+	<div class="confirm-page" >
 		<div class="confirm-title">
-			<router-link to="/checkticket">
-				<div class="icon-back"></div>
-			</router-link>
+			<!-- <router-link to="/checkticket"> -->
+				<div class="icon-back" @click="back()"></div>
+			<!-- </router-link> -->
 			<div class="title">确认订单</div>
 		</div>
 		<div class="show-description">
 			<div class="show-source">本票由博雅文化提供</div>
 			<div class="show-detail">
-				<div class="show-img"></div>
+				<div class="show-img"><img :src="currentShop.srcImg"></div>
 				<div class="text-detail">
-					<div class="name">【北京站】锐舞音乐嘉年华 SUPER RAVE</div>
-					<div class="time">2017-11-11 星期六 20:00</div>
-					<div class="place">北京 AMG LIVE(合纵现场)</div>
-					<div class="ticket">280元票面  &nbsp; x1张  </div>
+					<div class="name">{{ currentShop.showName}}</div>
+					<div class="time">{{ currentShop.time }}</div>
+					<div class="place">{{ currentShop.address }}</div>
+					<div class="ticket">{{ totalPrice }}元票面  &nbsp; x{{ currentShop.count }}张  </div>
 				</div>
 			</div>
 		</div>
@@ -62,7 +62,7 @@
 			<div class="footer-text">
 				<div class="money">
 					合计：
-					<span class="total">128</span>
+					<span class="total">{{ totalPrice }}</span>
 					元
 					<div class="word">不支持无理由退换货</div>
 				</div>
@@ -73,7 +73,36 @@
 </template>
 
 <script>
+	import bus from './bus/bus'
 	import reset from '../../static/js/reset.js'
+	export default {
+		data(){
+			return {
+				showProduct:{}
+			}
+		},
+		 created(){
+          bus.$on('data',(product)=>{
+          	this.showProduct = product;
+             console.log(this.showProduct);              
+          })        
+       },
+       methods:{
+           back(){
+           	history.back();
+           }
+       },
+     computed:{
+          totalPrice(){
+       		return this.$store.getters.totalPrice;
+       	},
+       	currentShop(){
+       	  return this.$store.state.currentShop;
+       	}
+         
+       }
+	}
+
 </script>
 
 <style>
@@ -129,11 +158,13 @@
 .show-description .show-detail .show-img{
 	width: 2.7rem;
 	height: 3.1rem;
-	background-image: url(https://img2.tking.cn/assets/img/N8i3wcpJb6.jpg);
 	background-size: 2.7rem 3.1rem;
 	border-radius: 0.175rem;
 }
-
+.show-img img{
+	width:85%;
+	overflow: hidden;
+}
 .show-description .show-detail .text-detail .name{
 	font-size: 0.35rem;
 	width: 5.325rem;

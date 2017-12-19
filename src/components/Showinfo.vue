@@ -1,6 +1,6 @@
 <template>
 	<div class="show-page">
-		<div class="show-detail">
+		<div class="show-detail" v-if='product'>
 			<div class="show-header" >
 				<!-- <img src="https://img2.tking.cn/assets/img/N8i3wcpJb6.jpg"> -->
 				<img :src= 'product.posterURL'>
@@ -9,8 +9,8 @@
 					<div class="show-name">{{ product.showName }}</div>
 					<div class="tag">{{ product.showStatus.displayName}}</div>
 					<div class="price">
-						<div class="number">{{ product.favour}}</div>
-						<div class="text">{{ product.minPrice}}元起</div>
+						<div class="number">{{ product.minPrice}}</div>
+						<div class="text">元起</div>
 					</div>
 				</div>
 				<div class="serration"></div>
@@ -168,7 +168,7 @@
 			</div>
 			<div style="flex: 1"></div>
 			<router-link to="/checkticket">
-				<div class="choose-ticket">选择票面</div>
+				<div class="choose-ticket" @click="addPrice(product)">选择票面</div>
 			</router-link>
 		</div>
 	</div>
@@ -176,17 +176,18 @@
 </template>
 
 <script>
+	import bus from './bus/bus'
 	import reset from '../../static/js/reset.js'
 	export default{
 		data(){
        return {
+       	products:[],
         showList:[],
 	    recommendList:[],
-			showInfo:[]
-
+		showInfo:[]
 			 }
 		},
-		created(){
+	 created(){
 			// 使用axios插件请求数据
       // 近期热点数据
 			this.$http.get("../../static/data/hotShow.json", {}).then((res)=>{
@@ -198,29 +199,35 @@
 				this.recommendList = res.data.result.data;
 			});
       // 演唱会数据
-			this.$http.get("../../static/data/showInfo.json",{}).then((res)=>{
+			this.$http.get("../../static/data/show_0.json",{}).then((res)=>{
 				this.showInfo = res.data.result.data;
 			});
 		},
 		methods:{
-
+			// 加入未付款列表
+           addPrice(product) { 
+           	console.log(product);
+           	this.products = product;
+           	this.$store.dispatch('add',product);
+              bus.$emit('data', this.products); 
+           }
 		},
 		computed:{
 			product(){
-				console.log(this.$route.params.showOID);
+				// console.log(this.$route.params.showOID);
 				for (var item of this.showList) {
 				 if (this.$route.params.showOID == item.showOID) {
 				 	   return item;
 				 }
 				}
-				for (var items of this.recommendList) {
-				 if (this.$route.params.showOID == items.showOID) {
-				 	   return items;
+				for (var item of this.recommendList) {
+				 if (this.$route.params.showOID == item.showOID) {
+				 	   return item;
 				 }
 				}
-				for (var items of this.showInfo) {
-				if (this.$route.params.showOID == items.showOID) {
-						return items;
+				for (var item of this.showInfo) {
+				if (this.$route.params.showOID == item.showOID) {
+						return item;
 				}
 			 }
 

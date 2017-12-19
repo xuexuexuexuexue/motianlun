@@ -1,0 +1,70 @@
+{
+    "statusCode": 200,
+    "result": {
+        "data": [
+            {
+                "keywordOID": "565ef2e80cf22c30883b2475",
+                "keyword": "张学友",
+                "count": 1207042,
+                "averageWeight": 2307
+            },
+            {
+                "keywordOID": "55f90c820cf27c2faeb68e56",
+                "keyword": "周杰伦",
+                "count": 566119,
+                "averageWeight": 1084
+            },
+            {
+                "keywordOID": "565f2bd20cf22874a341f6eb",
+                "keyword": "上海大剧院",
+                "count": 475754,
+                "averageWeight": 911
+            },
+            {
+                "keywordOID": "583fd7780cf2f3e0dca5ca1e",
+                "keyword": "【北京站】2016-2017",
+                "count": 283305,
+                "averageWeight": 828
+            },
+            {
+                "keywordOID": "565ee6300cf22c30883b246d",
+                "keyword": "CBA",
+                "count": 415123,
+                "averageWeight": 793
+            },
+            {
+                "keywordOID": "565fe9710cf22c30883b24ca",
+                "keyword": "邓丽君",
+                "count": 404293,
+                "averageWeight": 778
+            },
+            {
+                "keywordOID": "565ef97d0cf22c30883b247d",
+                "keyword": "德云社",
+                "count": 391475,
+                "averageWeight": 748
+            },
+            {
+                "keywordOID": "58379cfe0cf2b97e982f0c1c",
+                "keyword": "【大连站】2016",
+                "count": 233704,
+                "averageWeight": 695
+            },
+            {
+                "keywordOID": "570a493d0cf27d67d05f8688",
+                "keyword": "哔哩哔哩",
+                "count": 345314,
+                "averageWeight": 617
+            },
+            {
+                "keywordOID": "566598280cf2d696de644dec",
+                "keyword": "薛之谦",
+                "count": 288574,
+                "averageWeight": 554
+            }
+        ]
+    },
+    "comments": null,
+    "pagination": null,
+    "data": null
+}

@@ -1,12 +1,12 @@
 <template>
 	   <div class="userCenter-page">
     <div class="user-header">
-      <div class="back-icon"></div>
+      <div class="back-icon" @click="back"></div>
       <div class="header-text">个人中心</div>
     </div>
     <router-link to="/personal">
-      <div class="user-profile">
-        <div class="user-icon">
+      <div class="user-profile" >
+        <div class="user-icon" >
           <img src="../assets/tou.png">
         </div>
         <div class="phonenum">15712937752</div>
@@ -22,10 +22,13 @@
         </div>
       </router-link>
       <div class="status-orders">
+         <router-link to="/myorder">
         <div class="image-holder">
           <img src="../assets/order1.png">
+          <span class="active">{{ totalCount }}</span>
           <p>待付款</p>
         </div>
+         </router-link>
         <div class="image-holder">
           <img src="../assets/order2.png">
           <p>待配票</p>
@@ -69,7 +72,9 @@
         <div class="user-arow"></div>
       </div>
     </div>
+    <router-link to='/denglu'>
       <div class="logout-btn">退出登录</div>
+      </router-link>
       <footer>
         <router-link to="/home">
             <div class="footer-icon"></div>
@@ -89,10 +94,25 @@
 
 <script>
 	 import reset from '../../static/js/reset.js'
+    export default{
+       methods:{
+      back(){
+        // history.back();
+        this.$router.go(-1)
+      }
+    },
+    computed:{
+      totalCount(){
+        return this.$store.getters.totalCount;
+      }
+    }
+
+  }
 </script>
 
 <style>
   @import '../../static/css/reset.css'
+ 
 </style>
 
 <style>
@@ -193,6 +213,25 @@
 .my-orders .status-orders .image-holder img{
   width: 1.3rem;
   height: 1.05rem;
+}
+/* 未付款订单的数量css*/
+.image-holder{
+  position: relative;
+}
+
+.image-holder .active{
+  position: absolute;
+  top:0;
+  right:0.1rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  display: inline-block;
+  background-color: #fc5a5a;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 0.45rem;
+  font-size: 0.3rem;
+  color: #fff;
 }
 
 /*地址管理*/

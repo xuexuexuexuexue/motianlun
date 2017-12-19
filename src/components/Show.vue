@@ -14,16 +14,16 @@
         <div class="search-icon"></div>
       </div>
       <div class="showInfo-nav">
-        <div class="list-type-nav">
-          <div class="type-nav">全部</div>
-          <div class="type-nav">演唱会</div>
-          <div class="type-nav">话剧歌剧</div>
-          <div class="type-nav">体育赛事</div>
-          <div class="type-nav">音乐会</div>
-          <div class="type-nav">儿童亲子</div>
-          <div class="type-nav">舞蹈芭蕾</div>
-          <div class="type-nav">展览休闲</div>
-          <div class="type-nav">曲艺杂谈</div>
+        <div class="list-type-nav" @click="changeList">
+          <div class="type-nav" :data-index="0" >全部</div>
+          <div class="type-nav" :data-index="1">演唱会</div>
+          <div class="type-nav" :data-index="2">话剧歌剧</div>
+          <div class="type-nav" :data-index="3">体育赛事</div>
+          <div class="type-nav" :data-index="4">音乐会</div>
+          <div class="type-nav" :data-index="5">儿童亲子</div>
+          <div class="type-nav" :data-index="6">舞蹈芭蕾</div>
+          <div class="type-nav" :data-index="7">展览休闲</div>
+          <div class="type-nav" :data-index="8">曲艺杂谈</div>
         </div>
       </div>
       <div class="filters">
@@ -85,20 +85,32 @@
   	export default {
   		  data(){
           return {
-              showInfo: []
+						target:0,
+            showInfo: []
           }
         },
         created(){
             // 使用axios插件请求数据
-            this.$http.get("./static/data/showInfo.json",{}).then((res)=>{
-              this.showInfo = res.data.result.data;
-            });
-        },
+            // this.$http.get("../../static/data/show.json",{}).then((res)=>{
+            //   this.showInfo = res.data.result.data;
+            // });
+						this.$http.get("../../static/data/show_" + this.$route.params.index + ".json",{}).then((res)=>{
+							this.showInfo = res.data.result.data;
+						});
+			    },
+				 updated(){
+						this.$http.get("../../static/data/show_" + this.target + ".json",{}).then((res)=>{
+							this.showInfo = res.data.result.data;
+						});
+					},
 				methods:{
 					// 路由编程式传参  在方法中进行路由跳转，并传递参数
-		            changeDetail(showOID){
-		               this.$router.push("./showinfo/"+showOID)
-				   }
+		        changeDetail(showOID){
+		           this.$router.push("./showinfo/"+showOID)
+				   },
+					 changeList($event){
+						 this.target = $event.target.dataset.index;
+						 }
 				}
   	}
 </script>

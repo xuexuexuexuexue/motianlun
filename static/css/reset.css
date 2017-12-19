@@ -1,0 +1,41 @@
+/*公共样式 */
+	*{
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+
+	body{
+		font-family: 微软雅黑;
+		font-size: 0.3rem;
+		width: 100%;
+	}
+
+	a{
+		text-decoration: none;
+	}
+
+	ul,ol{
+		list-style: none;
+	}
+
+	img{
+		border: none;
+	}
+
+	textarea{
+		resize: none;
+		/*固定宽高*/
+	}
+
+	input,textarea{
+		outline: none;
+	}
+
+	.clear:after{
+	content: ".";
+	visibility: hidden;
+	height: 0;
+	clear: both;
+	display: block;
+	}

@@ -14,6 +14,7 @@ import Myaddr from '@/components/Myaddr'
 import Checkticket from '@/components/Checkticket'
 import Confirmorder from '@/components/Confirmorder'
 import Checkcity from '@/components/Checkcity'
+import Denglu from '@/components/Denglu'
 
 Vue.use(Router)
 Vue.use(VueAwesomeSwiper)
@@ -30,7 +31,7 @@ export default new Router({
             component: Home
         },
         {
-            path: '/show',
+            path: '/show/:index',
             name: 'Show',
             component: Show
         },
@@ -78,6 +79,12 @@ export default new Router({
             path: '/checkcity',
             name: 'Checkcity',
             component: Checkcity
+        },
+        {
+            path: '/denglu',
+            name: 'Denglu',
+            component: Denglu
         }
+
     ]
 })

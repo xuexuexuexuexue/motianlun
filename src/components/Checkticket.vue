@@ -1,39 +1,39 @@
 <template>
-	<div class="chktic-page">
+	<div class="chktic-page" >
 		<div class="tic-title">
-			<router-link to="/showinfo">
-				<div class="icon-back"></div>
-			</router-link>
-			<div class="title">【北京站】锐舞音乐嘉年华 SUPER RAVE</div>
+			<!-- <router-link to="/showinfo"> -->
+				<div class="icon-back" @click="back"></div>
+			<!-- </router-link> -->
+			<div class="title">{{ currentShop.showName }}</div>  
+			
 		</div>
 		<div class="calender-container">
 			<div class="session-name">
-				2017-11-11<br />
-				 星期六 20:00
+				 {{ currentShop.time }}
 			</div>
 		</div>
 		<div class="ticket-container">
 			<div class="section-name">票面</div>
 			<div class="ticket-list">
 				<div class="ticket-active">
-					<div class="price">280票面</div>
+					<div class="price">{{ currentShop.price }}票面</div>
 					<div class="other-info">预售</div>
 				</div>
-				<div class="ticket-active ticket">
+				<!-- <div class="ticket-active ticket">
 					<div class="price">480票面</div>
 					<div class="other-info">两日预售通票</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<div class="amount-container">
 			<div class="amount-label">选择数量</div>
 			<div class="amount-value">
-				<div class="minus">
+				<div class="minus"  @click="down(currentShop.showOID)">
 					<span></span>
 				</div>
-				<div class="number">1</div>
-				<div class="plus">
-					<span></span>
+				<div class="number" v-model="count">{{ currentShop.count }}</div>
+				<div class="plus" @click="up(currentShop.showOID)">
+					<span ></span>
 					<span></span>
 				</div>
 			</div>
@@ -50,10 +50,10 @@
 			<div class="text-content">
 				<div>合计：</div>
 				<div class="price">
-					<div class="count">146</div>
-					<div class="unit">元</div>
+					<div class="count"></div>
+					<div class="unit">{{ currentShop.price * currentShop.count }}元</div>
 				</div>
-				<div class="single-price">146元/张</div>
+				<div class="single-price">{{ currentShop.price }}元/张</div>
 			</div>
 			<router-link to="/confirmorder" class="button">
 				下一步
@@ -63,7 +63,49 @@
 </template>
 
 <script>
+    import bus from './bus/bus'
 	import reset from '../../static/js/reset.js'
+  export default {
+       data(){
+       	return {
+           showOID:'',
+           showName:'',
+           showProduct:{},
+           showList:[],
+	       recommendList:[],
+		   showInfo:[],
+           count:1
+       	}
+       },
+       created(){
+          bus.$on('data',(product) => {
+          	this.showProduct = product;
+             console.log(this.showProduct);              
+          })
+
+         
+       },
+       methods:{
+       	up(showOID){
+       		this.$store.dispatch('up',showOID);
+       	},
+       	down(showOID){
+       		this.$store.dispatch('down',showOID);
+       	},
+       	back(){
+       		history.back();
+       	}
+       },
+       computed:{
+       	totalPrice(){
+       		return this.$store.getters.totalPrice;
+       	},
+       	currentShop(){
+       	  return this.$store.state.currentShop;
+       	  // console.log(currentShop);
+       	}
+       }
+	}
 </script>
 
 <style>
